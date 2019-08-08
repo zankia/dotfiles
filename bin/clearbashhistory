@@ -1,0 +1,2 @@
+sort ~/.bash_history > /tmp/bash_history
+uniq /tmp/bash_history ~/.bash_history

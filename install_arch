@@ -1,0 +1,29 @@
+#! /bin/bash
+DIR=~/dotfiles
+cp $DIR/bin/update_arch $DIR/bin/update
+
+sudo ln -sf $DIR/pacman/pacman.conf /etc/
+sudo ln -sf $DIR/pacman/mirrorlist /etc/pacman.d/
+
+# for testing purpose
+#$DIR/bin/update
+#
+#sudo pacman -Sy \
+#    docker\
+#    docker-compose\
+#    opera\
+#    synapse\
+#    termite\
+#    wicd\
+#;
+
+ln -sf $DIR/vim/.vimrc ~/
+
+ln -sf $DIR/i3/config ~/.config/i3/
+ln -sf $DIR/i3/i3status.conf ~/.config/i3/
+
+ln -sf $DIR/termite/config ~/.config/termite
+
+ln -sf $DIR/bin ~/
+
+ln -sf $DIR/X11/.xinitrc_arch ~/.xinitrc
