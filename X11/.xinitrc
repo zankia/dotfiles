@@ -7,7 +7,6 @@
 #xinput --set-prop "ETPS/2 Elantech Touchpad" "Synaptics Palm Dimensions" 2, 200
 #xinput --set-prop "ETPS/2 Elantech Touchpad" "Synaptics Two-Finger Scrolling" 1 1
 xinput --set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
-xset dpms 300
 xset r rate 256 64
 setxkbmap -layout us -variant dvorak-alt-intl
 xsetroot -solid "#4B0082"

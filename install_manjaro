@@ -1,0 +1,60 @@
+#! /bin/bash
+DIR=~/dotfiles
+cp $DIR/bin/update_arch $DIR/bin/update
+
+sudo pacman -S --noconfirm aria2
+
+sudo ln -sf $DIR/pacman/pacman.conf /etc/
+
+$DIR/bin/update
+
+sudo pacman -S --noconfirm \
+    bash-completion
+    docker\
+    docker-compose\
+    feh\
+    firefox\
+    flameshot\
+    gimp\
+    inkscape\
+    intellij-idea-community-edition\
+    opera\
+    python-neovim\
+    qalculate-gtk\
+    synapse\
+    termite\
+    vlc\
+    zip unzip\
+;
+
+sudo systemctl enable ntpd
+
+yay -S --mflags --skipinteg --noconfirm aur/spotify
+
+ln -sf $DIR/bash/.bashrc ~/
+
+ln -sf $DIR/vim/.vimrc ~/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$DIR/bin/vimupdate
+
+wget https://github.com/madmalik/mononoki/releases/download/1.2/mononoki.zip -O /tmp/mononoki.zip
+unzip /tmp/mononoki.zip -d /tmp
+sudo mv /tmp/mononoki-*.ttf /usr/share/fonts/TTF/
+rm /tmp/mononoki*
+
+ln -sf $DIR/i3/config ~/.i3/
+ln -sf $DIR/i3/i3status.conf ~/.i3/
+
+mkdir -p ~/.config/termite
+ln -sf $DIR/termite/config ~/.config/termite/
+
+ln -sf $DIR/bin ~/
+
+ln -sf $DIR/wallpaper.png ~/
+
+sudo ln -sf $DIR/X11/20-keyboard.conf /etc/X11/xorg.conf.d/
+
+sudo groupadd -f docker
+sudo gpasswd -a $USER docker
+
+sudo hwclock --systohc

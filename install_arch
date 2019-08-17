@@ -19,8 +19,8 @@ sudo ln -sf $DIR/pacman/mirrorlist /etc/pacman.d/
 
 ln -sf $DIR/vim/.vimrc ~/
 
-ln -sf $DIR/i3/config ~/.config/i3/
-ln -sf $DIR/i3/i3status.conf ~/.config/i3/
+ln -sf $DIR/i3/config ~/.i3/
+ln -sf $DIR/i3/i3status.conf ~/.i3/
 
 ln -sf $DIR/termite/config ~/.config/termite
 
