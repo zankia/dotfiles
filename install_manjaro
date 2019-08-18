@@ -15,6 +15,7 @@ sudo pacman -S --noconfirm \
     feh\
     flameshot\
     gimp\
+    gparted\
     inkscape\
     intellij-idea-community-edition\
     opera\
