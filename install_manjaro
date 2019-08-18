@@ -9,7 +9,7 @@ sudo ln -sf $DIR/pacman/pacman.conf_manjaro /etc/pacman.conf
 $DIR/bin/update
 
 sudo pacman -S --noconfirm \
-    bash-completion
+    bash-completion\
     docker\
     docker-compose\
     feh\
