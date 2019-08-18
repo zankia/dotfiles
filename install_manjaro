@@ -4,7 +4,7 @@ cp $DIR/bin/update_arch $DIR/bin/update
 
 sudo pacman -S --noconfirm aria2
 
-sudo ln -sf $DIR/pacman/pacman.conf /etc/
+sudo ln -sf $DIR/pacman/pacman.conf_manjaro /etc/pacman.conf
 
 $DIR/bin/update
 
