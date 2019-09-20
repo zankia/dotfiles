@@ -18,6 +18,8 @@ sudo pacman -S --noconfirm \
     gparted\
     inkscape\
     intellij-idea-community-edition\
+    libreoffice-fresh\
+    npm\
     opera\
     python-neovim\
     qalculate-gtk\

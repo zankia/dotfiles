@@ -234,7 +234,6 @@ bar {
     output eDP1
     output eDP-1
     output eDP-1-1
-    output HDMI1
     output HDMI-1
     output HDMI-0
     output HDMI-1-1
@@ -244,12 +243,13 @@ bar {
 }
 
 bar {
+    output HDMI1
     output DP1
     output DP-1-1
     output DVI-D-0
     output DVI-D-1
     position top
-    status_command while(true) do date; sleep 1; done
+    status_command while(true) do date +'%T %A %d %B %Y'; sleep 1; done
 }
 
 
