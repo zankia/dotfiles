@@ -1,7 +1,8 @@
-if [ $(cat /sys/class/power_supply/BAT1/capacity) -lt 30 ]; then
+if [ $(cat /sys/class/power_supply/BAT?/capacity) -lt 30 ]; then
     timeout 60s i3-nagbar -m 'Branche moi !!!';
 fi
 
-if [ $(cat /sys/class/power_supply/BAT1/status) == 'Full' ]; then
+if [ $(cat /sys/class/power_supply/BAT?/status) == 'Full' ] ||
+        [ $(cat /sys/class/power_supply/BAT?/status) == 'Unknown' ]; then
     timeout 5s i3-nagbar -t warning -m 'Débranche moi !!!';
 fi
