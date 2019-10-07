@@ -1,0 +1,13 @@
+[user]
+	name = zankia
+	email = zankia16@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = simple
+[merge]
+	tool = vimdiff
+[alias]
+	hist = log --graph --all --abbrev-commit
