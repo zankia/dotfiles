@@ -26,4 +26,4 @@ ln -sf $DIR/termite/config ~/.config/termite
 
 ln -sf $DIR/bin ~/
 
-ln -sf $DIR/X11/.xinitrc_arch ~/.xinitrc
+ln -sf $DIR/X11/.xinitrc ~/.xinitrc
