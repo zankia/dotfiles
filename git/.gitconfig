@@ -1,6 +1,6 @@
 [user]
+	email = zankia@protonmail.com
 	name = zankia
-	email = zankia16@gmail.com
 [color]
 	ui = true
 [core]
@@ -11,3 +11,4 @@
 	tool = vimdiff
 [alias]
 	hist = log --graph --all --abbrev-commit
+	sync = fetch --all --prune
