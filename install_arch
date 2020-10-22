@@ -11,7 +11,7 @@ sudo ln -sf $DIR/pacman/mirrorlist /etc/pacman.d/
 #sudo pacman -Sy \
 #    docker\
 #    docker-compose\
-#    opera\
+#    brave-browser\
 #    synapse\
 #    termite\
 #    wicd\

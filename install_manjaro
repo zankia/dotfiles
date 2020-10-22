@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm \
     intellij-idea-community-edition\
     libreoffice-fresh\
     npm\
-    opera\
+    brave-browser\
     python-neovim\
     qalculate-gtk\
     synapse\

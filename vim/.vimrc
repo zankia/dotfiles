@@ -94,8 +94,13 @@ inoremap "<Backspace> <Left><Right>
 
 " other extensions
 au BufNewFile,BufRead *.ejs set filetype=html
-autocmd FileType ejs setlocal noet
 autocmd FileType html setlocal noet
+
+au BufNewFile,BufRead *.vue set filetype=vue
+autocmd FileType vue setlocal et
+autocmd FileType vue setlocal ts=2
+autocmd FileType vue setlocal sw=2
+autocmd FileType vue setlocal syntax=html
 
 " haskell
 let hs_highlight_types = 1
