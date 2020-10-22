@@ -1,0 +1,27 @@
+#! /bin/bash
+DIR=~/dotfiles
+cp $DIR/bin/update_debian $DIR/bin/update
+
+$DIR/bin/update
+
+ln -sf $DIR/bash/.bashrc ~/
+
+ln -sf $DIR/vim/.vimrc ~/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$DIR/bin/vimupdate
+
+# wget https://github.com/madmalik/mononoki/releases/download/1.2/mononoki.zip -O /tmp/mononoki.zip
+# unzip /tmp/mononoki.zip -d /tmp
+# sudo mv /tmp/mononoki-*.ttf /usr/share/fonts/TTF/
+# rm /tmp/mononoki*
+
+mkdir -p ~/.i3
+ln -sf $DIR/i3/config ~/.i3/
+ln -sf $DIR/i3/i3status.conf ~/.i3/
+
+ln -sf $DIR/bin ~/
+
+#ln -sf $DIR/wallpaper.png ~/
+
+sudo groupadd -f docker
+sudo gpasswd -a $USER docker
