@@ -25,6 +25,9 @@ ln -sf $DIR/bin ~/
 
 #ln -sf $DIR/wallpaper.png ~/
 
+mkdir -p ~/.config
+ln -sf $DIR/ranger ~/.config/ranger
+
 sudo chsh -s /bin/zsh zankia
 
 sudo groupadd -f docker

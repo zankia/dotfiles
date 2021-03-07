@@ -23,6 +23,7 @@ sudo pacman -S --noconfirm \
     brave-browser\
     python-neovim\
     qalculate-gtk\
+    ranger\
     synapse\
     termite\
     vlc\
@@ -50,6 +51,8 @@ ln -sf $DIR/i3/i3status.conf ~/.i3/
 
 mkdir -p ~/.config/termite
 ln -sf $DIR/termite/config ~/.config/termite/
+
+ln -sf $DIR/ranger ~/.config/ranger
 
 ln -sf $DIR/bin ~/
 
