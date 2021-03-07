@@ -1,2 +1,2 @@
 clearbashhistory
-sort ~/.bash_history | uniq | grep $1
+sort ~/.*history | uniq | grep $1

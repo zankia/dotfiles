@@ -20,6 +20,9 @@ set shiftwidth=4
 set splitright
 syntax on
 
+"Disable EX mode
+:map Q <Nop>
+
 
 "plugins
 set nocompatible

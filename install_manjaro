@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 DIR=~/dotfiles
 cp $DIR/bin/update_arch $DIR/bin/update
 
@@ -34,12 +34,13 @@ sudo systemctl enable ntpd
 yay -S --mflags --skipinteg --noconfirm aur/spotify
 
 ln -sf $DIR/bash/.bashrc ~/
+ln -sf $DIR/zsh/.zshrc ~/
 
 ln -sf $DIR/vim/.vimrc ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $DIR/bin/vimupdate
 
-wget https://github.com/madmalik/mononoki/releases/download/1.2/mononoki.zip -O /tmp/mononoki.zip
+wget https://github.com/madmalik/mononoki/releases/download/1.3/mononoki.zip -O /tmp/mononoki.zip
 unzip /tmp/mononoki.zip -d /tmp
 sudo mv /tmp/mononoki-*.ttf /usr/share/fonts/TTF/
 rm /tmp/mononoki*

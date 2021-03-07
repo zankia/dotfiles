@@ -95,10 +95,10 @@ export PATH=$PATH:~/bin:$GOPATH/bin
 =() { echo -e "\e[35m$@ \e[36m=\e[96m $(($@))\e[39m"; }
 
 # less syntax highlight
-alias lessh="/usr/share/vim/vim80/macros/less.sh"
+alias lessh="/usr/share/vim/vim82/macros/less.sh"
 
 # cal more compliant
-alias cal="cal -my"
+alias cal="ncal -Myb"
 
 # some more ls aliases
 alias ll='ls -alFh'
@@ -107,4 +107,3 @@ alias l='ls -CF'
 
 # Add an "alert" alias for long running commands. Use like so: `sleep 10; alert`
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
