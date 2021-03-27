@@ -14,7 +14,9 @@ compinit
 HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=10000
+setopt appendhistory
 setopt autocd
+setopt histignorealldups
 unsetopt beep extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -32,7 +34,7 @@ ex () {
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
@@ -55,6 +57,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# Human readable
+alias df="df -h"
 
 # less syntax highlight
 alias lessh="/usr/share/vim/vim82/macros/less.sh"
