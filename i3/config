@@ -228,7 +228,7 @@ exec --no-startup-id synapse
 
 exec --no-startup-id xset r rate 256 64
 exec --no-startup-id xinput --set-prop "TPPS/2 ALPS TrackPoint" "libinput Accel Speed" -0.7
-exec --no-startup-id feh --bg-fill ~/wallpaper.*
+exec --no-startup-id feh --randomize --bg-fill /wallpapers/*.jpg
 exec --no-startup-id eval `ssh-agent -s`
 exec --no-startup-id brave-browser
 
