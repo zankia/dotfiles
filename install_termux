@@ -1,6 +1,5 @@
 #! /bin/bash
 DIR=~/dotfiles
-cp $DIR/bin/update_debian  $DIR/bin/update
 
 mkdir -p .termux
 ln -sf $DIR/termux/* ~/.termux/
