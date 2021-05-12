@@ -1,0 +1,8 @@
+#! /bin/bash
+DIR=~/dotfiles
+cp $DIR/bin/update_debian  $DIR/bin/update
+
+mkdir -p .termux
+ln -sf $DIR/termux/* ~/.termux/
+
+wget https://github.com/madmalik/mononoki/blob/master/export/mononoki-Regular.ttf -O ~/.termux/font.ttf
