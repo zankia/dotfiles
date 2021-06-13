@@ -223,14 +223,14 @@ exec --no-startup-id conky -c /usr/share/conky/conky_green
 exec --no-startup-id xautolock -locker i3lock -c 4B0082
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id termite
+exec --no-startup-id $TERMINAL
 exec --no-startup-id synapse
 
 exec --no-startup-id xset r rate 256 64
 exec --no-startup-id xinput --set-prop "TPPS/2 ALPS TrackPoint" "libinput Accel Speed" -0.7
 exec --no-startup-id feh --randomize --bg-fill /wallpapers/*.jpg
 exec --no-startup-id eval `ssh-agent -s`
-exec --no-startup-id brave-browser
+exec --no-startup-id $BROWSER
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {

@@ -1,16 +1,21 @@
 #! /bin/zsh
+
+# Setup
 DIR=~/dotfiles
 cp $DIR/bin/update_arch $DIR/bin/update
 
+# Package Manager
 sudo pacman -S --noconfirm aria2
 
 sudo ln -sf $DIR/pacman/pacman.conf_manjaro /etc/pacman.conf
 
+# Update and install
 $DIR/bin/update
 
 sudo pacman -S --noconfirm \
     atool\
     bash-completion\
+    brave\
     docker\
     docker-compose\
     feh\
@@ -20,8 +25,10 @@ sudo pacman -S --noconfirm \
     inkscape\
     intellij-idea-community-edition\
     libreoffice-fresh\
+    noto-fonts-emoji\
     npm\
-    brave-browser\
+    pavucontrol\
+    pulseaudio\
     python-neovim\
     qalculate-gtk\
     ranger\
@@ -31,37 +38,53 @@ sudo pacman -S --noconfirm \
     zip unzip\
 ;
 
+# Clock
 sudo systemctl enable ntpd
+#sudo hwclock --systohc #not sure of the usefulness
 
+# Install Spotify via AUR
 yay -S --mflags --skipinteg --noconfirm aur/spotify
 
+# Shell
 ln -sf $DIR/bash/.bashrc ~/
 ln -sf $DIR/zsh/.zshrc ~/
+ln -sf $DIR/manjaro/.profile ~/.profile
 
+sudo chsh -s $(which zsh) $USER
+
+# Vim
 ln -sf $DIR/vim/.vimrc ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $DIR/bin/vimupdate
 
+# Fonts
 wget https://github.com/madmalik/mononoki/releases/download/1.3/mononoki.zip -O /tmp/mononoki.zip
 unzip /tmp/mononoki.zip -d /tmp
-sudo mv /tmp/mononoki-*.ttf /usr/share/fonts/TTF/
-rm /tmp/mononoki*
+sudo mv /tmp/webfont/mononoki-*.ttf /usr/share/fonts/TTF/
+rm -r /tmp/webfont
 
+# Window Manager
 ln -sf $DIR/i3/config ~/.i3/
 ln -sf $DIR/i3/i3status.conf ~/.i3/
 
+# Terminal
 mkdir -p ~/.config/termite
 ln -sf $DIR/termite/config ~/.config/termite/
 
+# File Explorer
 ln -sf $DIR/ranger ~/.config/ranger
 
+# Scripts
 ln -sf $DIR/bin ~/
 
+
+# Wallpaper
 ln -sf $DIR/wallpaper.png ~/
 
+# Keyboard layout
 sudo ln -sf $DIR/X11/20-keyboard.conf /etc/X11/xorg.conf.d/
 
+# Docker
 sudo groupadd -f docker
 sudo gpasswd -a $USER docker
 
-sudo hwclock --systohc
