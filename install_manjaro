@@ -52,6 +52,9 @@ ln -sf $DIR/manjaro/.profile ~/
 
 sudo chsh -s $(which zsh) $USER
 
+# git
+ln -sf $DIR/git/.gitconfig ~/
+
 # Vim
 ln -sf $DIR/vim/.vimrc ~/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -78,7 +81,6 @@ ln -sf $DIR/ranger ~/.config/ranger/
 
 # Scripts
 ln -sf $DIR/bin ~/
-
 
 # Wallpaper
 ln -sf $DIR/wallpaper.png ~/
