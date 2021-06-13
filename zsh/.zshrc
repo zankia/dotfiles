@@ -23,11 +23,14 @@ compinit
 HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=10000
-setopt appendhistory
-setopt autocd
+unsetopt append_history
+unsetopt inc_append_history
+setopt auto_cd
 setopt dvorak
-setopt histignorealldups
-setopt menucomplete
+setopt hist_ignore_dups
+setopt hist_reduce_blanks
+setopt menu_complete
+setopt share_history
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
