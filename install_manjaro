@@ -48,7 +48,7 @@ yay -S --mflags --skipinteg --noconfirm aur/spotify
 # Shell
 ln -sf $DIR/bash/.bashrc ~/
 ln -sf $DIR/zsh/.zshrc ~/
-ln -sf $DIR/manjaro/.profile ~/.profile
+ln -sf $DIR/manjaro/.profile ~/
 
 sudo chsh -s $(which zsh) $USER
 
@@ -64,6 +64,7 @@ sudo mv /tmp/webfont/mononoki-*.ttf /usr/share/fonts/TTF/
 rm -r /tmp/webfont
 
 # Window Manager
+mkdir -p ~/i3
 ln -sf $DIR/i3/config ~/.i3/
 ln -sf $DIR/i3/i3status.conf ~/.i3/
 
@@ -72,7 +73,8 @@ mkdir -p ~/.config/termite
 ln -sf $DIR/termite/config ~/.config/termite/
 
 # File Explorer
-ln -sf $DIR/ranger ~/.config/ranger
+mkdir -p ~/.config/ranger
+ln -sf $DIR/ranger ~/.config/ranger/
 
 # Scripts
 ln -sf $DIR/bin ~/

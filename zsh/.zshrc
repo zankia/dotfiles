@@ -1,9 +1,18 @@
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' max-errors 1
-zstyle ':completion:*' menu select=long
+zstyle ':completion:*' menu select
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle :compinstall filename '/home/zankia/.zshrc'
 
@@ -16,8 +25,9 @@ HISTSIZE=1000
 SAVEHIST=10000
 setopt appendhistory
 setopt autocd
+setopt dvorak
 setopt histignorealldups
-unsetopt beep extendedglob
+setopt menucomplete
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
@@ -74,5 +84,3 @@ alias l='ls -CF'
 
 # Add an "alert" alias for long running commands. Use like so: `sleep 10; alert`
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-alias gparted="sudo gparted"
