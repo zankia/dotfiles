@@ -7,6 +7,12 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+# For termite new terminal opening
+if [[ -e /etc/profile.d/vte.sh ]]; then
+  source /etc/profile.d/vte.sh
+fi
+
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
@@ -78,7 +84,7 @@ alias df="df -h"
 alias lessh="/usr/share/vim/vim82/macros/less.sh"
 
 # cal more compliant
-alias cal="ncal -Myb"
+alias cal="cal -y"
 
 # some more ls aliases
 alias ll='ls -alFh'
