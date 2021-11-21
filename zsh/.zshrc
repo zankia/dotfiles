@@ -46,6 +46,8 @@ export PATH=$PATH:~/bin
 PROMPT="%F{green}%n@%m%f:%F{blue}%1~%f%# "
 RPROMPT="%(?.%F{green}✓.%F{red}?%?)%f %*"
 
+eval `ssh-agent` > /dev/null
+
 # archive extractor
 ex () {
   if [ -f $1 ] ; then

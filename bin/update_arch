@@ -1,2 +1,2 @@
-sudo pacman -Syu --noconfirm;
+sudo pacman -Syyu --noconfirm;
 sudo pacman -Sc --noconfirm;
