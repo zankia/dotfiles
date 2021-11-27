@@ -79,6 +79,10 @@ ln -sf $DIR/termite/config ~/.config/termite/
 mkdir -p ~/.config/ranger
 ln -sf $DIR/ranger ~/.config/ranger/
 
+# Notifications settings
+mkdir -p ~/.config/dunst
+ln -sf $DIR/dunst ~/.config/dunst
+
 # Scripts
 ln -sf $DIR/bin ~/
 

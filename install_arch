@@ -24,7 +24,12 @@ ln -sf $DIR/i3/i3status.conf ~/.i3/
 
 mkdir -p ~/.config/termite
 ln -sf $DIR/termite/config ~/.config/termite
+
+mkdir -p ~/.config/ranger
 ln -sf $DIR/ranger ~/.config/ranger
+
+mkdir -p ~/.config/dunst
+ln -sf $DIR/dunst ~/.config/dunst
 
 ln -sf $DIR/bin ~/
 

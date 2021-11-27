@@ -28,6 +28,9 @@ ln -sf $DIR/bin ~/
 mkdir -p ~/.config
 ln -sf $DIR/ranger ~/.config/ranger
 
+mkdir -p ~/.config/dunst
+ln -sf $DIR/dunst ~/.config/dunst
+
 sudo chsh -s /bin/zsh zankia
 
 sudo groupadd -f docker
