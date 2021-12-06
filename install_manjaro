@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm \
     qalculate-gtk\
     ranger\
     synapse\
-    termite\
+    alacritty\
     vlc\
     zip unzip\
 ;
@@ -67,20 +67,15 @@ sudo mv /tmp/webfont/mononoki-*.ttf /usr/share/fonts/TTF/
 rm -r /tmp/webfont
 
 # Window Manager
-mkdir -p ~/i3
-ln -sf $DIR/i3/config ~/.i3/
-ln -sf $DIR/i3/i3status.conf ~/.i3/
+ln -sf $DIR/i3 ~/.i3
 
 # Terminal
-mkdir -p ~/.config/termite
-ln -sf $DIR/termite/config ~/.config/termite/
+ln -sf $DIR/alacritty ~/.config/alacritty
 
 # File Explorer
-mkdir -p ~/.config/ranger
-ln -sf $DIR/ranger ~/.config/ranger/
+ln -sf $DIR/ranger ~/.config/ranger
 
 # Notifications settings
-mkdir -p ~/.config/dunst
 ln -sf $DIR/dunst ~/.config/dunst
 
 # Scripts

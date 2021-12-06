@@ -13,22 +13,18 @@ sudo pacman -Sy \
     docker-compose\
     brave\
     synapse\
-    termite\
+    alacritty\
     wicd\
 ;
 
 ln -sf $DIR/vim/.vimrc ~/
 
-ln -sf $DIR/i3/config ~/.i3/
-ln -sf $DIR/i3/i3status.conf ~/.i3/
+ln -sf $DIR/i3 ~/.i3
 
-mkdir -p ~/.config/termite
-ln -sf $DIR/termite/config ~/.config/termite
+ln -sf $DIR/alacritty ~/.config/alacritty
 
-mkdir -p ~/.config/ranger
 ln -sf $DIR/ranger ~/.config/ranger
 
-mkdir -p ~/.config/dunst
 ln -sf $DIR/dunst ~/.config/dunst
 
 ln -sf $DIR/bin ~/
