@@ -1,7 +1,10 @@
 #! /bin/bash
 DIR=~/dotfiles
 
-mkdir -p .termux
+mkdir -p ~/.termux
 ln -sf $DIR/termux/* ~/.termux/
+
+mkdir -p ~/bin
+ln -s /data/data/com.termux/files/usr/bin/vim bin/termux-file-editor
 
 wget https://github.com/madmalik/mononoki/blob/master/export/mononoki-Regular.ttf -O ~/.termux/font.ttf
