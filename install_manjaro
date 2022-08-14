@@ -32,7 +32,7 @@ sudo pacman -S --noconfirm \
     python-neovim\
     qalculate-gtk\
     ranger\
-    synapse\
+    rofi\
     alacritty\
     vlc\
     zip unzip\
@@ -74,6 +74,9 @@ ln -sf $DIR/alacritty ~/.config/alacritty
 
 # File Explorer
 ln -sf $DIR/ranger ~/.config/ranger
+
+# Launcher
+ln -sf $DIR/rofi ~/.config/rofi
 
 # Notifications settings
 ln -sf $DIR/dunst ~/.config/dunst

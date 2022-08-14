@@ -12,7 +12,7 @@ sudo pacman -Sy \
     docker\
     docker-compose\
     brave\
-    synapse\
+    rofi\
     alacritty\
     wicd\
 ;
@@ -24,6 +24,8 @@ ln -sf $DIR/i3 ~/.i3
 ln -sf $DIR/alacritty ~/.config/alacritty
 
 ln -sf $DIR/ranger ~/.config/ranger
+
+ln -sf $DIR/rofi ~/.config/rofi
 
 ln -sf $DIR/dunst ~/.config/dunst
 
