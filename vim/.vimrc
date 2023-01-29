@@ -3,7 +3,7 @@ set autoindent
 set background=dark
 set backspace=indent,eol,start
 set browsedir=current
-set colorcolumn=80
+set colorcolumn=90
 set completeopt=menu
 set completefunc=.,w,b,u,t,i
 "set cursorbind
@@ -30,11 +30,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'dense-analysis/ale'
 Plugin 'ctrlp.vim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'tpope/vim-surround'
-"Plugin 'shougo/deoplete.nvim'
+Plugin 'shougo/deoplete.nvim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'udalov/kotlin-vim'
@@ -43,17 +43,9 @@ call vundle#end()
 filetype plugin indent on
 
 
-"syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['govet', 'go', 'golint']
-let g:loaded_syntastic_java_javac_checker = 1
-let g:syntastic_css_csslint_args = "--warnings=none"
+" ale config
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
+nmap <silent> <C-N> <Plug>(ale_previous_wrap)
 
 
 " deoplete config

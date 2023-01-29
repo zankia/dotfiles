@@ -40,6 +40,12 @@ setopt share_history
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+bindkey "\e[3~" delete-char #delete
+bindkey "\e[H" beginning-of-line #begin
+bindkey "\e[F" end-of-line #end
+bindkey "\e[5~" backward-word #pageUp
+bindkey "\e[6~" forward-word #pageDown
+
 export PATH=$PATH:~/bin
 
 # Prompt appearance

@@ -56,7 +56,7 @@ configuration {
 //	pid: "/run/user/1000/rofi.pid";
 	kb-move-char-back: "Control+b";
 	kb-move-char-forward: "Control+f";
-	kb-mode-next: "Right,Tab";
+	kb-mode-next: "Right";
 	kb-mode-previous: "Left,Shift+Tab";
 	kb-row-tab: "";
 	timeout {
