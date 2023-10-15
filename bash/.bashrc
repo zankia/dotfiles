@@ -21,7 +21,7 @@ shopt -s checkwinsize
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 #setting the format of prompt
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+PS1='\[\033[01;34m\]\W\[\033[00m\]\$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -31,8 +31,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-. /etc/profile.d/vte.sh
 
 #
 # # ex - archive extractor
@@ -103,7 +101,7 @@ alias lessh="/usr/share/vim/vim82/macros/less.sh"
 alias cal="ncal -Myb"
 
 # some more ls aliases
-alias ll='ls -alFh'
+alias ll='ls -aoh --time-style="+%d/%m/%y"'
 alias la='ls -A'
 alias l='ls -CF'
 
