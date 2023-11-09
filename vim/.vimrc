@@ -3,7 +3,7 @@ set autoindent
 set background=dark
 set backspace=indent,eol,start
 set browsedir=current
-set colorcolumn=90
+set colorcolumn=96
 set completeopt=menu
 set completefunc=.,w,b,u,t,i
 "set cursorbind

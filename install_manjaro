@@ -15,7 +15,7 @@ $DIR/bin/update
 sudo pacman -S --noconfirm \
     atool\
     bash-completion\
-    brave\
+    brave-browser\
     docker\
     docker-compose\
     feh\
@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm \
     gparted\
     inkscape\
     intellij-idea-community-edition\
-    libreoffice-fresh\
+    libreoffice-still\
     noto-fonts-emoji\
     npm\
     pavucontrol\
@@ -67,18 +67,21 @@ sudo mv /tmp/webfont/mononoki-*.ttf /usr/share/fonts/TTF/
 rm -r /tmp/webfont
 
 # Window Manager
+rm -r ~/.i3
 ln -sf $DIR/i3 ~/.i3
 
 # Terminal
 ln -sf $DIR/alacritty ~/.config/alacritty
 
 # File Explorer
-ln -sf $DIR/ranger ~/.config/ranger
+ln -sf $DIR/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -sf $DIR/ranger/rifle.conf ~/.config/ranger/rifle.conf
 
 # Launcher
 ln -sf $DIR/rofi ~/.config/rofi
 
 # Notifications settings
+rm -r ~/.config/dunst
 ln -sf $DIR/dunst ~/.config/dunst
 
 # Scripts
