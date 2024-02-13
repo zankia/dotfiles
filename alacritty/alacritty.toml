@@ -1,0 +1,43 @@
+[colors.bright]
+black = "#666666"
+blue = "#48c6ff"
+cyan = "#63e7f0"
+green = "#ccff00"
+magenta = "#be67e1"
+red = "#ff00a0"
+white = "#f3f3f3"
+yellow = "#ff9f00"
+
+[colors.normal]
+black = "#1c1c1c"
+blue = "#048ac7"
+cyan = "#0ac1cd"
+green = "#cee318"
+magenta = "#833c9f"
+red = "#ff005b"
+white = "#909090"
+yellow = "#ffe755"
+
+[colors.primary]
+background = "#1c1c1c"
+foreground = "#eeeeee"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "mononoki"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Control|Shift"
+
+[scrolling]
+multiplier = 8
+
+[window]
+opacity = 0.9

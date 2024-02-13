@@ -222,20 +222,20 @@ mode "resize" {
 bindsym $mod+Shift+l exec --no-startup-id i3lock -c 4B0082
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
-exec --no-startup-id xcompmgr
+exec --no-startup-id picom
 # exec --no-startup-id blueman-applet
 exec --no-startup-id conky -c /usr/share/conky/conky_green
 exec --no-startup-id xautolock -locker i3lock -c 4B0082
-exec_always --no-startup-id ff-theme-util
+#exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 #exec --no-startup-id $TERMINAL
 
 exec --no-startup-id xset r rate 256 64
-exec --no-startup-id xinput --set-prop "TPPS/2 ALPS TrackPoint" "libinput Accel Speed" -0.7
+#exec --no-startup-id xinput --set-prop "TPPS/2 ALPS TrackPoint" "libinput Accel Speed" -0.7
 exec --no-startup-id feh --randomize --bg-fill /wallpapers/*.jpg
 exec --no-startup-id /home/zankia/bin/midi-to-keys
 exec --no-startup-id $BROWSER

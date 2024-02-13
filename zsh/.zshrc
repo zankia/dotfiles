@@ -93,7 +93,7 @@ export MANROFFOPT="-P -c"
 alias df="df -h"
 
 # less syntax highlight
-alias lessh="/usr/share/vim/vim82/macros/less.sh"
+alias lessh="/usr/share/vim/vim91/macros/less.sh"
 
 # cal more compliant
 alias cal="cal -y"
