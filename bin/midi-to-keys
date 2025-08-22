@@ -4,10 +4,10 @@ aseqdump -p $(aseqdump -l | grep V25 | head -n 1 | cut -d ':' -f 1) | \
 while IFS=" ," read src ev1 ev2 ch label1 data1 label2 data2 rest; do
     sinks=("${(@f)$(pactl list sinks | grep "Sink #" | cut -c 7-)}")
     case "$ev1 $ev2 $data1" in
-        "Control change 20") pactl set-sink-volume $sinks[2] $(($data2 - 27))%;;
-        "Control change 21") pactl set-sink-volume $sinks[1] $(($data2 - 27))%;;
-        "Control change 22") pactl set-source-volume 68 $(($data2 - 27))%;;
-        "Control change 23") pactl set-sink-input-volume $(pactl list sink-inputs | awk '/Sink Input #/ {res=substr($3, 2)}; /application.process.binary/ { if ($3 == "\"spotify\"") {printf(res)}}') $(($data2 - 27))%;;
+        "Control change 20") pactl set-sink-volume $sinks[2] $(($data2 * 100 / 127))%;;
+        "Control change 21") pactl set-sink-volume $sinks[1] $(($data2 * 100 / 127))%;;
+        "Control change 22") pactl set-source-volume 68 $(($data2 * 100 / 127))%;;
+        "Control change 23") pactl set-sink-input-volume $(pactl list sink-inputs | awk '/Sink Input #/ {res=substr($3, 2)}; /application.process.binary/ { if ($3 == "\"spotify\"") {printf(res)}}') $(($data2 * 100 / 127))%;;
         "Program change 48") pactl set-source-volume 0 10%;;
         "Note on 36") xdotool search --onlyvisible --name "OBS.*My profile" key F11;;
         "Note on 37") xdotool search --onlyvisible --name "OBS.*My profile" key F6;;

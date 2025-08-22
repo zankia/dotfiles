@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+mount -v /mnt || sudo mount -v /dev/sdc1 /mnt || { echo unable to mount card && exit 10 }
+[ ! -f /mnt/.3dprinter ] && echo control file not found && exit 11
+rsync --del -ru --progress ~/Projects/Perso/3dPrinting/gcode/ /mnt/
+umount -v /mnt

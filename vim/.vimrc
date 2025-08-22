@@ -13,6 +13,7 @@ set hlsearch
 set incsearch
 set list
 set listchars=tab:>-,trail:~,extends:>,precedes:<
+set mouse=n
 set number
 set tabstop=4
 set scrolloff=8
@@ -47,6 +48,7 @@ filetype plugin indent on
 nmap <silent> <C-n> <Plug>(ale_next_wrap)
 nmap <silent> <C-N> <Plug>(ale_previous_wrap)
 
+let g:ale_openscad_sca2d_options = '--ignore I0004'
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1
@@ -141,3 +143,8 @@ function AutoHighlightToggle()
         return 1
     endif
 endfunction
+
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif

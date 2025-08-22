@@ -1,1 +1,11 @@
-feh --randomize --bg-fill /wallpapers/*.jpg
+#!/bin/sh
+PATH=$PATH:/usr/local/bin
+
+# Version X11
+#feh --randomize --bg-fill /wallpapers/*.jpg
+
+# Version Sway
+for output in $(swaymsg -t get_outputs | jq -r '.[].name'); do
+    file=$(find /wallpapers -name '*.jpg' | sort -R | head -n 1)
+    swww img -o "$output" -t any --transition-duration 1 "$file"
+done

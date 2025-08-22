@@ -69,6 +69,7 @@ rm -r /tmp/webfont
 # Window Manager
 rm -r ~/.i3
 ln -sf $DIR/i3 ~/.i3
+ln -sf $DIR/sway ~/.config/sway
 
 # Terminal
 ln -sf $DIR/alacritty ~/.config/alacritty

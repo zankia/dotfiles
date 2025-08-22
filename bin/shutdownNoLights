@@ -1,0 +1,9 @@
+#! /bin/sh
+set -e
+
+TOKEN=$(node -e "import config from '/home/zankia/Projects/Perso/alarm/config.js'; console.log(config.openhab.token);")
+
+curl --fail -u "$TOKEN:" -H "Content-Type: text/plain" -d "OFF" https://domo.eco/rest/items/SalonLumiere_Power
+curl --fail -u "$TOKEN:" -H "Content-Type: text/plain" -d "10" https://domo.eco/rest/items/CuisineLumiere_Brightness
+
+shutdown -P now

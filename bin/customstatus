@@ -1,0 +1,10 @@
+#! /bin/sh
+
+i3status -c .i3/i3status.conf| (read -r line; echo "$line"; read -r line ; echo "$line" ; read -r line ; echo "$line" ; while true
+do
+  read -r line
+  json="$(echo "$line" | sed -e 's/^,\[//')"
+  output="{\"full_text\":\"$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true).output') \"}"
+  json=",[$output,$json"
+  echo "$json"
+done)

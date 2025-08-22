@@ -21,6 +21,8 @@ ln -sf $DIR/vim/.vimrc ~/
 
 ln -sf $DIR/i3 ~/.i3
 
+ln -sf $DIR/sway ~/.config/sway
+
 ln -sf $DIR/alacritty ~/.config/alacritty
 
 ln -sf $DIR/ranger ~/.config/ranger
