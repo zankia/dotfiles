@@ -305,13 +305,14 @@ client.urgent             $c_important  $c_important    $c_white    $c_important
 
 # Keyboard
 input * {
-    xkb_layout us
-    xkb_variant dvorak-alt-intl
+    xkb_layout us,us
+    xkb_variant dvorak-alt-intl,
     repeat_delay 256
     repeat_rate 64
+#    xkb_options grp:ctrl_shift_toggle
 }
 
 # Screens
-output DP-1 pos 0 0 scale 1.5 mode 3840x2160 adaptive_sync on
+output DP-1 pos 0 0 scale 1 mode 2560x1440@143.973Hz adaptive_sync on
 output HDMI-A-1 pos 0 0 scale 1.5 mode 3840x2160@120Hz adaptive_sync on
 output DP-2 pos 2560 0 mode 2560x1440@143.856Hz adaptive_sync on
