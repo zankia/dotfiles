@@ -1,6 +1,7 @@
 [user]
-	email = zankia@protonmail.com
+	email = mail@zankia.fr
 	name = zankia
+	signingkey = 7AA5D3AA376D3DDC
 [color]
 	ui = true
 [core]
@@ -21,3 +22,5 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true

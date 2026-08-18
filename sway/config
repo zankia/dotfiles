@@ -48,9 +48,9 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +.5db
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -.5db
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Spotify controls
 bindsym XF86AudioStop exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
@@ -242,7 +242,7 @@ exec --no-startup-id clipit
 exec_always --no-startup-id fix_xcursor
 #exec --no-startup-id $TERMINAL
 
-exec --no-startup-id swww-daemon
+exec --no-startup-id awww-daemon
 exec --no-startup-id /home/zankia/bin/midi-to-keys
 exec --no-startup-id /home/zankia/bin/changeWallpaper
 exec --no-startup-id $BROWSER
@@ -304,12 +304,16 @@ client.unfocused          $c_second     $c_second       $c_gray     $c_second
 client.urgent             $c_important  $c_important    $c_white    $c_important
 
 # Keyboard
-input * {
+input type:keyboard {
     xkb_layout us,us
     xkb_variant dvorak-alt-intl,
     repeat_delay 256
     repeat_rate 64
 #    xkb_options grp:ctrl_shift_toggle
+}
+
+input type:tablet_tool {
+    map_to_output DP-1
 }
 
 # Screens

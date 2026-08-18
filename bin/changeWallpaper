@@ -7,5 +7,5 @@ PATH=$PATH:/usr/local/bin
 # Version Sway
 for output in $(swaymsg -t get_outputs | jq -r '.[].name'); do
     file=$(find /wallpapers -name '*.jpg' | sort -R | head -n 1)
-    swww img -o "$output" -t any --transition-duration 1 "$file"
+    awww img -o "$output" -t any --transition-duration 1 "$file"
 done

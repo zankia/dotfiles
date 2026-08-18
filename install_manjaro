@@ -33,6 +33,7 @@ sudo pacman -S --noconfirm \
     qalculate-gtk\
     ranger\
     rofi\
+    rofimoji\
     alacritty\
     vlc\
     zip unzip\
@@ -80,6 +81,7 @@ ln -sf $DIR/ranger/rifle.conf ~/.config/ranger/rifle.conf
 
 # Launcher
 ln -sf $DIR/rofi ~/.config/rofi
+ln -sf $DIR/rofi/rofimoji.rc ~/.config/rofimoji.rc
 
 # Notifications settings
 rm -r ~/.config/dunst

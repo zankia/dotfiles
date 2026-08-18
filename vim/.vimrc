@@ -49,6 +49,7 @@ nmap <silent> <C-n> <Plug>(ale_next_wrap)
 nmap <silent> <C-N> <Plug>(ale_previous_wrap)
 
 let g:ale_openscad_sca2d_options = '--ignore I0004'
+let g:ale_c_cc_options = '--compile-commands-dir=~/Projects/Perso/keyboard/qmk_firmware'
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1

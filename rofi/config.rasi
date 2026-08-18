@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,ssh,run,combi,filebrowser,drun,keys";
+	modi: "window,ssh,run,emoji:rofimoji,combi,filebrowser,drun,keys";
 	font: "mononoki 14";
 //	location: 0;
 //	yoffset: 0;
