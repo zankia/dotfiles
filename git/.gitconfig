@@ -19,8 +19,8 @@
 	process = git-lfs filter-process
 	required = true
 [pull]
-	rebase = false
+	rebase = true
 [init]
 	defaultBranch = main
-[commit]
-	gpgsign = true
+#[commit]
+#	gpgsign = true

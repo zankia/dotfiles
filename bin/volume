@@ -1,0 +1,14 @@
+#!/bin/sh
+
+pactl set-sink-volume @DEFAULT_SINK@ "$1.5db"
+
+HID_ID=0003:0000027E:00000000 # Duffy
+
+grep -l "HID_ID=.*${HID_ID}" /sys/class/hidraw/hidraw*/device/uevent | \
+while IFS= read -r uevent; do
+    node="/dev/$(basename "$(dirname "$(dirname "$uevent")")")"
+    volume=$(printf '%02x' "$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | head -1)")
+    printf "\x${volume}                                " > "$node"
+done
+
+
